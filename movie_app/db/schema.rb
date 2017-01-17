@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170117125837) do
+ActiveRecord::Schema.define(version: 20170117130302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20170117125837) do
     t.float    "rating"
     t.string   "movie_name", null: false
     t.text     "movie_desc", null: false
-    t.time     "movie_time"
   end
 
 end
