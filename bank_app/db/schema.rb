@@ -12,10 +12,13 @@
 
 ActiveRecord::Schema.define(version: 20170119075904) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "accounts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float    "balance"
+    t.integer  "balance"
     t.integer  "branch_id"
   end
 
@@ -47,4 +50,14 @@ ActiveRecord::Schema.define(version: 20170119075904) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "movies", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date     "movie_year", null: false
+    t.float    "rating"
+    t.string   "movie_name", null: false
+    t.text     "movie_desc", null: false
+  end
+
+  add_foreign_key "accounts", "branches"
 end
