@@ -1,0 +1,10 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true, bgcolor="none"]
+	"Branch" [shape=Mrecord, label="{Branch|id :integer\lbranch_name :character varying\lbranch_city :character varying\lcreated_at :timestamp without time zone\lupdated_at :timestamp without time zone\l}"]
+	"Customer" [shape=Mrecord, label="{Customer|id :integer\lcustomer_name :character varying\lcustomer_street :character varying\lcustomer_city :character varying\lcreated_at :timestamp without time zone\lupdated_at :timestamp without time zone\l}"]
+	"Account" [shape=Mrecord, label="{Account|id :integer\lbalance :integer\lcreated_at :timestamp without time zone\lupdated_at :timestamp without time zone\lbranch_id :integer\l}"]
+	"ApplicationRecord" []
+	"Depositor" [shape=Mrecord, label="{Depositor|id :integer\laccount_id :integer\lcustomer_id :integer\lcreated_at :timestamp without time zone\lupdated_at :timestamp without time zone\l}"]
+	"Borrower" [shape=Mrecord, label="{Borrower|id :integer\lcustomer_id :integer\lloan_id :integer\lcreated_at :timestamp without time zone\lupdated_at :timestamp without time zone\l}"]
+	"Loan" [shape=Mrecord, label="{Loan|id :integer\lamount :integer\lcreated_at :timestamp without time zone\lupdated_at :timestamp without time zone\lbranch_id :integer\l}"]
+}
