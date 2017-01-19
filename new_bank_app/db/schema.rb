@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119124854) do
+ActiveRecord::Schema.define(version: 20170119125056) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "acc_number"
-    t.string   "branch_id"
+    t.integer  "branch_id"
     t.integer  "balance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
