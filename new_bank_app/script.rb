@@ -1,9 +1,9 @@
 require 'csv'
 
-fields = %w{branch_id amount}
+fields = %w{customer_id account_id}
 
-CSV.foreach("/home/debugger2017/activerecord_demo/new_bank_app/data/borrower.csv",headers: true) do |row|
+CSV.foreach("/home/debugger2017/activerecord_demo/new_bank_app/data/depositors.csv",headers: true) do |row|
 	rows = row.to_hash
-	a = Borrower.new(rows)
+	a = Depositor.new(rows)
 	a.save
 end
